@@ -1,0 +1,53 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.header {
+	height:40px;
+	font-size:18px;
+	color:#fff;
+	background-color: blue;
+	margin-bottom: 10px;
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+
+.list-of-people {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 60px;
+
+	flex:1 1 auto;
+
+}
+
+.person {
+	display: flex;
+	width: 200px;
+	border:solid 1px silver;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	margin:20px;
+	flex-grow: 1;
+
+	flex-direction: column;
+
+}
+
+.person-name {
+	font-weight: bold;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+
+.email {
+	font-style: italic;
+	color: #0c8896;
+	margin-top: 6px;
+}

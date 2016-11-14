@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ES6 and angular</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div class="header">People List</div>
+
+	<div id="app" class="container-app">
+		<div class="list-of-people" ng-controller="mainController as ctrl" ng-cloak>
+			<cards items="ctrl.list"></cards>						
+		</div>
+	</div>
+
+	<script type="text/javascript" src="build/bundle.js"></script>
+</body>
+</html>
