@@ -9,8 +9,7 @@ class MainController  {
 
 		this.initList();
 
-		this.sampleString = 'this is my string';
-		this.changeString($timeout);
+		this.filter = '';
 	}
 
 	initList() {
@@ -27,12 +26,8 @@ class MainController  {
 			});
 	}
 
-	changeString() {
-		// setTimeout(() => {
-		this.$timeout(() => {
-			this.sampleString = 'Now i have changed the string!!!!';
-		}, 2000);
-	}
+
+
 }
 
 MainController.$inject = ['DataService', '$timeout']; //used for minification

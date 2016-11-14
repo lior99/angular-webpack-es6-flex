@@ -7,12 +7,13 @@ function cards(){
 	return {
 		restrict : 'E',
 		template : `
-			<div ng-repeat="person in vm.items" class="person">
+			<div ng-repeat="person in vm.items | filter:vm.filter" class="person">
 				<person-card person="person"></person-card>
 			</div>
 		`,
 		bindToController : {
-			items : "="
+			items : "=",
+			filter : '='
 		},
 		controllerAs : 'vm',
 		controller : Cards,

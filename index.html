@@ -6,11 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
-	<div class="header">People List</div>
+	<div class="header">Employees Cards</div>
 
 	<div id="app" class="container-app">
-		<div class="list-of-people" ng-controller="mainController as ctrl" ng-cloak>
-			<cards items="ctrl.list"></cards>						
+		<div ng-controller="mainController as ctrl" ng-cloak>
+			<div class="filter-container">
+				<input type="text" name="" placeholder="filter..." ng-model="ctrl.filter">
+			</div>
+
+			<div class="cards-container">
+				<cards items="ctrl.list" filter="ctrl.filter"></cards>						
+			</div>
 		</div>
 	</div>
 
