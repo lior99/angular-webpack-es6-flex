@@ -1,5 +1,7 @@
+
+
 module.exports = {
-	entry : `${__dirname}/src/main.js`,
+	entry : ['babel-polyfill', `${__dirname}/src/main.js`],
 	output : {
 		path : `${__dirname}/build`,
 		filename : 'bundle.js'
@@ -17,11 +19,8 @@ module.exports = {
 		]
 	},
 	devServer: {
-	    //contentBase: "./src",
-	    noInfo: false,
-	    hot: true
-  },
-
-  // support source maps
-  devtool: "#inline-source-map"
+	    inline:true,
+	    hot : true
+  	},
+  	devtool: "inline-sourcemap"
 }

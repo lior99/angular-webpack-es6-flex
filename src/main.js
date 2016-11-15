@@ -1,8 +1,11 @@
+import "babel-polyfill";
+
 import angular from 'angular';
 import MainController from './MainController'; 
 import DataService  from './DataService';
 import directiveFunction from './EmployeeCard';
 import cards from './Cards';
+
 
 angular
 	.module('mainApp', [])
@@ -12,3 +15,4 @@ angular
 	.directive('cards', cards);
 
 angular.bootstrap(document.querySelector('#app'), ['mainApp']);
+
