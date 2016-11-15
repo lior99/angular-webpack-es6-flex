@@ -7,8 +7,8 @@ function cards(){
 	return {
 		restrict : 'E',
 		template : `
-			<div ng-repeat="person in vm.items | filter:vm.filter" class="person">
-				<person-card person="person"></person-card>
+			<div ng-repeat="employee in vm.items | filter:vm.filter" class="employee">
+				<employee-card employee="employee"></employee-card>
 			</div>
 		`,
 		bindToController : {

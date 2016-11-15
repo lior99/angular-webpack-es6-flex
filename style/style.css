@@ -22,19 +22,13 @@ body {
 	font-family: sans-serif;
 }
 
-
-.list-of-people {
+.header > span {
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-around;
-	margin-top: 60px;
-
-	flex:1 1 auto;
-
+	flex-grow: 1;
+	justify-content: center;
 }
 
-.person {
+.employee {
 	display: flex;
 	width: 200px;
 	border:solid 1px silver;
@@ -48,12 +42,12 @@ body {
 
 }
 
-.person:hover {
+.employee:hover {
 	background-color: #696767;
 	color:#fff;
 }
 
-.person-name {
+.employee-name {
 	font-weight: bold;
 	font-size: 22px;
 	margin-bottom: 5px;
@@ -65,7 +59,7 @@ body {
 	margin-top: 6px;
 }
 
-.person:hover .email{
+.employee:hover .email{
 	color:#fff;
 }
 
@@ -82,6 +76,7 @@ input[type=text] {
 	height:27px;
 	border:solid 1px #70aadb;
 	border-radius: 2px;
+	padding-left: 10px;
 
 }
 
@@ -92,5 +87,12 @@ input[type=text] {
 	margin-top: 100px;
 	max-height: 500px;
 	overflow-y: auto;
-
 }
+
+.menu-bars {
+	display: flex;
+	justify-content: center;
+	padding-right: 13px;
+	font-size: 30px;
+}
+

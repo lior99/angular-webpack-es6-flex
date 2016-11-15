@@ -16,8 +16,8 @@ class MainController  {
 		this.service.getData()
 			.then((data) => {
 				this.$timeout(() => {
-					data.forEach((p) => {
-						this.list.push(this.service.createPersonObject(p));
+					data.forEach((employee) => {
+						this.list.push(this.service.createEmployeeObject(employee));
 					});
 				});
 			})
@@ -25,9 +25,6 @@ class MainController  {
 				console.error('there was a problem', err);
 			});
 	}
-
-
-
 }
 
 MainController.$inject = ['DataService', '$timeout']; //used for minification

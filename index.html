@@ -3,10 +3,14 @@
 <head>
 	<title>ES6 and angular</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
-	<div class="header">Employees Cards</div>
+	<div class="header">
+		<span>Employees Cards</span>
+		<i class="fa fa-bars menu-bars"></i>
+	</div>
 
 	<div id="app" class="container-app">
 		<div ng-controller="mainController as ctrl" ng-cloak>
@@ -21,5 +25,6 @@
 	</div>
 
 	<script type="text/javascript" src="build/bundle.js"></script>
+
 </body>
 </html>

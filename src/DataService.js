@@ -18,7 +18,7 @@ class DataService  {
 		});
 	}
 
-	createPersonObject(rawPersonObject) {
+	createEmployeeObject(rawPersonObject) {
 		return {
 			name : `${ rawPersonObject.firstName } ${ rawPersonObject.lastName }`,
 			firstName : rawPersonObject.firstName,
