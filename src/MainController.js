@@ -16,9 +16,7 @@ class MainController  {
 		this.service.getData()
 			.then((data) => {
 				this.$timeout(() => {
-					data.forEach((employee) => {
-						this.list.push(this.service.createEmployeeObject(employee));
-					});
+					this.list = data;
 				});
 			})
 			.catch((err) => {

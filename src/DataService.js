@@ -9,12 +9,10 @@ class DataService  {
 		const url = `http://www.filltext.com/?rows=200&firstName={firstName}&lastName={lastName}&company={business}&email={email}&pretty=true`;
 
 		return new Promise((resolve, reject) => {
-			$.ajax({
-				method : 'get',
-				url : url,
-				success:resolve,
-				error : reject
-			});
+			$.get(url, (response) => {
+					resolve(response.map(this.createEmployeeObject));
+				})
+				.fail(reject);
 		});
 	}
 
