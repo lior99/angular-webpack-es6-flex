@@ -1,20 +1,26 @@
-import $ from "jquery";
+import axios from "axios";
 
 class DataService  {
 	constructor() {
 	}
 
-	//fetch data
 	getData() {
 		const url = `http://www.filltext.com/?rows=200&firstName={firstName}&lastName={lastName}&company={business}&email={email}&pretty=true`;
 
+		// wrapping in a promise so getData will ALWAYS
+		// return a promise to whoever calls it
+		// --------------------------------------------
 		return new Promise((resolve, reject) => {
-			$.get(url, (response) => {
-					resolve(response.map(this.createEmployeeObject));
+			axios(url)
+				.then((response) => {
+					resolve(response.data.map(this.createEmployeeObject));
 				})
-				.fail(reject);
+				.catch((err) => {
+					reject(err);
+				});
 		});
 	}
+
 
 	createEmployeeObject(rawPersonObject) {
 		return {

@@ -6,10 +6,10 @@ class Cards {
 function cards(){
 	return {
 		restrict : 'E',
-		template : `
-			<div ng-repeat="employee in vm.items | filter:vm.filter" class="employee">
-				<employee-card employee="employee"></employee-card>
-			</div>
+		template : `			
+				<div ng-repeat="employee in vm.items | filter:vm.filter" class="employee">
+					<employee-card employee="employee"></employee-card>
+				</div>
 		`,
 		bindToController : {
 			items : "=",

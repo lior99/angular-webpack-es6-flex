@@ -137,3 +137,8 @@ input[type=text] {
 	padding-right: 13px;
 	font-size: 30px;
 }
+
+
+/*.spinner:before {
+	content:'&#xf110;';
+}*/
